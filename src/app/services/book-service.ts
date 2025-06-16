@@ -8,7 +8,7 @@ import { Book } from '../models/book';
 })
 export class BookService {
 
-  private apiUrl = 'https://localhost:7174/api/book/GetAllBooks';
+  private apiUrl = 'http://localhost:5064/api/Book/GetAllBooks';
 
   constructor(private http: HttpClient) {}
 
