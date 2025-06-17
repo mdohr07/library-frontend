@@ -1,16 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-search',
-  imports: [FormsModule, AsyncPipe],
+  imports: [FormsModule],
   templateUrl: './search.html',
   styleUrl: './search.scss',
 })
 export class Search {
-  searchTerm: any;
-  filterResults() {
-    throw new Error('Method not implemented.');
-  }
+  searchTerm: string = '';
+
+@Output() search = new EventEmitter<string>();
+
+onInput(): void {
+  this.search.emit(this.searchTerm);
+}
+
+onSubmit(): void {
+  this.search.emit(this.searchTerm);
+}
+
+  // filterResults() {
+  //   throw new Error('Method not implemented.');
+  // }
 }

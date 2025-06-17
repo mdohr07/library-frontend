@@ -16,26 +16,23 @@ import { Search } from '../../search/search';
 })
 
 export class Home {
-  private bookService: BookService = inject(BookService);
+  private bookService = inject(BookService);
 
-  book$!: Observable<Book[]>;
+  allBooks$!: Observable<Book[]>;
   filteredBooks$!: Observable<Book[]>;
 
-  searchTerm: string = '';
+  // searchTerm: string = '';
 
   constructor() {
-    this.book$ = this.bookService.getBooks(); // something's wrong with this.book$
-    this.filteredBooks$ = this.book$;
+    this.allBooks$ = this.bookService.getBooks(); // something's wrong with this.book$
+    this.filteredBooks$ = this.allBooks$;
   }
 
-  filterResults(): void {
-    if (this.searchTerm) {
-      this.filteredBooks$ = this.book$;
-      return;
-    }
+  onSearch(searchTerm: string): void {
+    const lowercaseSearchterm = searchTerm.toLowerCase();
 
-    this.filteredBooks$ = this.filteredBooks$.pipe(
-      map(books => books.filter(book => book.title.toLowerCase().includes(this.searchTerm.toLowerCase()))) 
+    this.filteredBooks$ = this.allBooks$.pipe(
+      map(books => books.filter(book => book.title.toLowerCase().includes(lowercaseSearchterm)))
     )
-  }
+  };
 }
