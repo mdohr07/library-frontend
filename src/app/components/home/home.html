@@ -1,14 +1,1 @@
-blabla from home.html
-
-<h2>Search</h2>
-<form>
-    <input type="text" [(ngModel)]="searchTerm" name="Search field" aria-placeholder="Search by title" id="search"
-        (input)="filterResults()">
-    <button class="primary" (click)="filterResults()">Search</button>
-</form>
-
-<ul>
-    <li *ngFor="let book of filteredBooks$ | async">
-        {{ book.title }} ({{ book.yearOfPublishing }}) ― {{ book.language }}
-    </li>
-</ul>
+<app-search></app-search>

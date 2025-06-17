@@ -1,21 +1,20 @@
 import { Component, inject } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import { AsyncPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { map, Observable } from 'rxjs';
 import { BookService } from '../../services/book-service';
-import { BookList } from "../book-list/book-list";
 import { Book } from '../../models/book';
+import { Search } from '../../search/search';
 
 @Component({
   selector: 'app-home',
   imports: [
-    BookList,
-    FormsModule,
-    AsyncPipe
+    CommonModule,
+    Search
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
+
 export class Home {
   private bookService: BookService = inject(BookService);
 
