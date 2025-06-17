@@ -21,7 +21,7 @@ export class Home {
   allBooks$!: Observable<Book[]>;
   filteredBooks$!: Observable<Book[]>;
 
-  // searchTerm: string = '';
+searchTerm: string = '';
 
   constructor() {
     this.allBooks$ = this.bookService.getBooks(); // something's wrong with this.book$
@@ -29,6 +29,7 @@ export class Home {
   }
 
   onSearch(searchTerm: string): void {
+    this.searchTerm = searchTerm;
     const lowercaseSearchterm = searchTerm.toLowerCase();
 
     this.filteredBooks$ = this.allBooks$.pipe(

@@ -1,6 +1,12 @@
 <h2>Search</h2>
 <form (ngSubmit)="onSubmit()">
-    <input type="text" [(ngModel)]="searchTerm" name="search" placeholder="Search by title" id="search"
-        (input)="onInput()">
+    <input 
+    type="text" 
+    [(ngModel)]="searchTerm" 
+    name="search" 
+    placeholder="Search by title" 
+    id="search"
+    (input)="onInput()"
+    />
     <button class="btn-primary">Search</button>
 </form>

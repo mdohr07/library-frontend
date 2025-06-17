@@ -5,7 +5,13 @@
     </li>
   </ul> -->
 
-  <section *ngIf="filteredBooks$ | async as books">
+  <section *ngIf="searchTerm && (filteredBooks$ | async) as books">
+    <!-- wenn filteredBooks$ einen Wert liefert: async Pipe -->
+    <!-- Pipe: 
+            mehrere Operatoren aneinanderreihen,
+            Datenstrom transformieren, 
+            filtern oder bearbeiten
+    -->
     <ul *ngIf="books.length > 0">
         <li *ngFor="let book of books">
             {{ book.title }}
