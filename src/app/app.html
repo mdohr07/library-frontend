@@ -1,15 +1,17 @@
 <main>
-    <header class="brand-name">
-        <a [routerLink]="['/']"><h1>ITBH library</h1></a>
-    </header>
+    <div class="wrapper">
+        <header class="brand-name">
+            <a [routerLink]="['/']">
+                <h1>ITBH library</h1>
+            </a>
+        </header>
 
-    <nav>
-        <a routerLink="/books">📚 Show books</a> /
-        <a routerLink="/login">🔐 Login</a> /
-        <a routerLink="/register">📝 Register</a>
-    </nav>
+        <nav>
+            <a routerLink="/books">📚 Show books</a> /
+            <a routerLink="/login">🔐 Login</a> /
+            <a routerLink="/register">📝 Register</a>
+        </nav>
 
-    <router-outlet></router-outlet>
-
+        <router-outlet></router-outlet>
+    </div>
 </main>
-

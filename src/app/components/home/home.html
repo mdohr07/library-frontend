@@ -1,9 +1,4 @@
 <app-search (search)="onSearch($event)"></app-search>
-<!-- <ul>
-    <li *ngFor="let book of filteredBooks$ | async">
-      {{ book.title }}
-    </li>
-  </ul> -->
 
   <section *ngIf="searchTerm && (filteredBooks$ | async) as books">
     <!-- wenn filteredBooks$ einen Wert liefert: async Pipe -->

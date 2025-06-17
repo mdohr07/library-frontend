@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #ccc;
+    font-family: 'Tahoma', sans-serif;
+    color: #000;
+}
+
+a,
+a:active {
+    color: blue;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 800px;
+    min-height: 85vh;
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    border: outset;
+}
+
+nav {
+    width: 98%;
+    text-align: center;
+    border-bottom: outset;
+    padding: 0.5rem;
+}
+
+nav a, 
+nav a:active,
+nav a:visited {
+    text-decoration: none;
+}
