@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { BookList } from "./components/book-list/book-list";
+import {RouterLink, RouterOutlet} from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterModule, BookList],
+  imports: [RouterModule, CommonModule, RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
 //  protected title = 'frontend';
 }
+

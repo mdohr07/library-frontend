@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BookService } from '../../services/book-service';
 import { Book } from '../../models/book';
@@ -6,16 +7,14 @@ import { Book } from '../../models/book';
 
 @Component({
   selector: 'app-book-list',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './book-list.html',
   styleUrl: './book-list.scss'
 })
 
-export class BookList {
+export class BookList implements OnInit {
   
 books: Book[] = [];
-book: any;
 
 constructor(private bookService: BookService) {}
 
@@ -25,5 +24,5 @@ ngOnInit(): void { // von OnInit-Schnittstelle (implements OnInit)
     error: (err) => console.error('An error occured while trying to load the books: ', err)
   });
 }
-
 }
+

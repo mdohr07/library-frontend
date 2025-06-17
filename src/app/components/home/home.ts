@@ -3,7 +3,7 @@ import { BookList } from "../book-list/book-list";
 
 @Component({
   selector: 'app-home',
-  imports: [BookList],
+  imports: [],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
