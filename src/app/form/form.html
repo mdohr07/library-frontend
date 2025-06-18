@@ -1,19 +1,33 @@
 <div class="form-wrapper">
-    <form action="/" method="post">
+    <form action="/" method="post" (ngSubmit)="onSubmit()"><!--  #loginForm="ngForm" -->
         <section class="img-container">
             <img src="" alt="">
         </section>
 
         <section class="form-container">
             <label for="username"><b>Username</b></label>
-            <input type="text" name="username" id="username" required placeholder="Enter your username">
+            <input 
+            type="text" 
+            name="username" 
+            id="username" 
+            required 
+            placeholder="Enter your username"
+            [(ngModel)]="username"
+            >
 
             <label for="password"><b>password</b></label>
-            <input type="password" name="password" id="password" required placeholder="Enter your password">
+            <input 
+            type="password" 
+            name="password" 
+            id="password" 
+            required 
+            placeholder="Enter your password"
+            [(ngModel)]="password"
+            >
 
-            <button class="btn-login"></button>
-            <label for="remember-me">
-                <input type="checkbox" name="remember-me" checked="checked">
+            <button class="btn-login" type="submit"></button>
+            <label for="remember">
+                <input type="checkbox" name="remember" checked="checked">
             </label>
         </section>
 

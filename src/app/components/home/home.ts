@@ -4,12 +4,14 @@ import { map, Observable } from 'rxjs';
 import { BookService } from '../../services/book-service';
 import { Book } from '../../models/book';
 import { Search } from '../../search/search';
+import { Form } from '../../form/form';
 
 @Component({
   selector: 'app-home',
   imports: [
     CommonModule,
-    Search
+    Search,
+    Form
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'
