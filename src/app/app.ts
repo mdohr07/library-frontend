@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({

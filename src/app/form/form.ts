@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './form.html',
   styleUrl: './form.scss'
 })
+
 export class Form {
   username: string = '';
   password: string = '';

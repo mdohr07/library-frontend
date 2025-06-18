@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BookService } from '../../services/book-service';
 import { Book } from '../../models/book';
@@ -7,7 +6,7 @@ import { Book } from '../../models/book';
 
 @Component({
   selector: 'app-book-list',
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule],
   templateUrl: './book-list.html',
   styleUrl: './book-list.scss'
 })
