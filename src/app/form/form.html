@@ -25,15 +25,39 @@
             [(ngModel)]="password"
             >
 
+        <!-- Register mode -->
+        <section class="form-container" *ngIf="mode === 'register'">
+            <input 
+            type="password" 
+            name="confirmPassword" 
+            id="confirmPassword"
+            required
+            placeholder="Confirm your password"
+            [(ngModel)]="confirmPassword" 
+            >
+        </section>
+            
+
             <section class="submit">
-            <button class="btn-login btn" type="submit">Login</button>
-            <label for="remember">
+            <button class="btn-login btn" type="submit">
+                {{ mode === 'login' ? 'Login' : 'Register' }}
+            </button>
+
+              <label for="remember">
                 <input class="checkbox" type="checkbox" name="remember" checked="checked">
                 Remember me
             </label>
         </section>
         </section>
 
-        <span>Forgot your <a href="#">password?</a></span>
+        <span>
+            <a (click)="toggleMode()">
+            {{ mode === 'login' ? 'No Account? Register' : 'Already a member? Login' }}
+            </a>
+        </span>
+
     </form>
 </div>
+
+<p>Forgot your <a href="#">password?</a></p>
+
