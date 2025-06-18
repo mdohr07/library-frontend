@@ -10,6 +10,11 @@ a:active {
     color: blue;
 }
 
+a:hover,
+a:visited {
+    color: #660099;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;

@@ -1,7 +1,7 @@
 <div class="form-wrapper">
     <form action="/" method="post" (ngSubmit)="onSubmit()"><!--  #loginForm="ngForm" -->
-        <section class="img-container">
-            <img src="" alt="">
+        <section class="head-container">
+            <h4>User Login</h4>
         </section>
 
         <section class="form-container">
@@ -25,10 +25,13 @@
             [(ngModel)]="password"
             >
 
-            <button class="btn-login" type="submit"></button>
+            <section class="submit">
+            <button class="btn-login btn" type="submit">Login</button>
             <label for="remember">
-                <input type="checkbox" name="remember" checked="checked">
+                <input class="checkbox" type="checkbox" name="remember" checked="checked">
+                Remember me
             </label>
+        </section>
         </section>
 
         <span>Forgot your <a href="#">password?</a></span>
